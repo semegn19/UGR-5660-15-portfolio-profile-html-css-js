@@ -6,29 +6,30 @@
     <meta name="description" content="Welcome to Semegn Mulugeta's portfolio. Learn about my skills, interests, and aspirations as a Software Engineering student.">
     <title>About me</title>
     <link rel="stylesheet" href="css/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
     <header>
         <nav class="navbar">
-        <button class="hamburger" aria-label="Toggle navigation">                                      
+        <button class="hamburger" aria-label="Toggle navigation" onclick="toggleNav()">                                      
            <span></span> 
            <span></span>
            <span></span> 
         </button>
-        <ul>
-            <li><a href="index.html">Home</a></li>
+        <ul id="nav-links">
+            <li><a href="../index.html">Home</a></li>
             <li><a href="about-me.html">About me</a></li>
             <li><a href="moments.html">Favorite moments</a></li>
             <li><a href="skills.html">Skills</a></li>
             <li><a href="contact-me.html">Contact me</a></li>
         </ul>             
     </nav>
-    <script src="js/nav.js"></script>
     </header>
     <main>
-        <h1 class="title">
-            <img src="images/user.png" alt="Person icon">About me</h1>
+        <h1>About me</h1>
+        <div class="sections-container">
         <section id="about-me">
             <h2>Who I am</h2>
             <p>I'm Semegn Mulugeta, a third-year <strong>software engineering student</strong> in Addis Ababa University. I am passionate about using technology to create impactful solutions, and I want to be an <em>AI developer</em>.</p>
@@ -46,14 +47,19 @@
             <p>I love visiting historical sites and exploring new cities. My dream is to travel across Africa to learn about its diverse cultures.</p>
             
             <p>I am a big fan of thriller series, the type that will keep you guessing till the end. I also love watching comedy, crime & teenage adventure series. Some of my favorite series are:</p>
-            <ul>
-                <li><cite>Dark</cite></li>
-                <li><cite>From</cite></li>
-                <li><cite>The Blacklist</cite></li>
-                <li><cite>Riverdale</cite></li>
-                <li><cite>The 100</cite></li>
-                <li><cite>Stranger Things</cite></li>
-                <li><cite>Teen Wolf</cite></li>
+            <ul class="different">
+                <div class="why">
+                    <li><cite>Dark</cite></li>
+                    <li><cite>From</cite></li>
+                    <li><cite>The Blacklist</cite></li>
+                    <li><cite>Riverdale</cite></li>
+                </div>
+                
+                <div class="side">
+                    <li><cite>The 100</cite></li>
+                    <li><cite>Stranger Things</cite></li>
+                    <li><cite>Teen Wolf</cite></li>
+                </div>                
             </ul> 
         </section>
     
@@ -62,14 +68,23 @@
             <p>My ultimate goal is to work as an AI developer, creating innovative solutions that improve people's lives. I am particularly interested in natural language processing and how AI can be used to bridge communication gaps.
             </p>
         </section>
-        
+        </div>
     </main>
     <footer>
         <small>
-            &copy; 2023, Copyrights reserved. | Designed by Semegn Mulugeta.
+            &copy; 2024, Copyrights reserved. | Designed by Semegn Mulugeta.
         </small> 
-        <script src="js/footer.js"></script>
+        
     </footer>
-    <script src="js/main.js"></script>
+    <script>
+        function toggleNav() {
+     var navLinks = document.getElementById('nav-links');
+     var body = document.body; navLinks.classList.toggle('show'); 
+     if (navLinks.classList.contains('show')) { body.classList.add('moved-content'); } else { body.classList.remove('moved-content'); }
+     }
+     const hamburger = document.querySelector('.hamburger');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');});
+    </script>
 </body>
 </html>
