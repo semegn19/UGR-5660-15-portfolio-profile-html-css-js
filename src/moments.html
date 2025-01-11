@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to Semegn Mulugeta's portfolio. Learn about my skills, interests, and aspirations as a Software Engineering student.">
     <link rel="stylesheet" href="css/moments_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <title>Favorite Moments</title>
     
@@ -12,53 +13,51 @@
 <body>
     <header>
         <nav class="navbar">
-        <button class="hamburger" aria-label="Toggle navigation">                                      
+        <button class="hamburger" aria-label="Toggle navigation" onclick="toggleNav()">                                      
            <span></span> 
            <span></span>
            <span></span> 
         </button>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-me.html">About me</a></li>
-                <li><a href="moments.html">Favorite moments</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact-me.html">Contact me</a></li>
-            </ul>             
-        </nav>
-        <script src="js/nav.js"></script>
+        <ul id="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about-me.html">About me</a></li>
+            <li><a href="moments.html">Favorite Moments</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact-me.html">Contact me</a></li>
+        </ul>          
+        </nav>        
     </header>
 
     <main>
-        <h1 class="title">
-            <img src="images/image.png" alt="image icon">Favorite Moments</h1>    
+        <h1 class="title">Favorite Moments</h1>    
         <section class="container">
-            <h3>Celebrating Christmas with my friends</h3>
-            <div class="gallery">
+            <h2>Celebrating Christmas with my friends</h2>
+            <div class="gallery"> 
                 <figure>
                     <img src="images/Gena1.jpg" alt="Performance of Ethiopian Orthodox song">
-                    <figcaption>Group photo performing an Ethiopian Orthodox song</figcaption>
+                    <figcaption class="first">Group photo performing an Ethiopian Orthodox song</figcaption>
                 </figure>
-                <figure>
-                    <img src="images/Gena2.jpg" alt="Group photo at Christmas celebration">
-                    <figcaption>Group photo with my friends at Christmas celebration</figcaption>
+                <figure >
+                    <img src="images/Gena2.jpg" alt="Group photo at Christmas celebration" class="one">
+                    <figcaption class="second">Group photo with my friends at Christmas celebration</figcaption>
                 </figure>
                 <figure>
                     <video controls>
                         <source src="video/Gena.mp4" type="video/mp4">
                     </video>
-                    <figcaption>Performance of <dfn lang="am">Wereb</dfn>, which is a type of Ethiopian Orthodox Christian song</figcaption>
+                    <figcaption id="cut">Performance of <dfn lang="am">Wereb</dfn>, which is a type of Ethiopian Orthodox Christian song</figcaption>
                 </figure>
             </div> 
          </section>
     
         <section class="container">
-            <h3>Celebrating <dfn lang="am">Meskel</dfn>, a holiday that commemorates the discovery of the True Cross, with my friends</h3>
+            <h2>Celebrating <dfn lang="am">Meskel</dfn>, a holiday that commemorates the discovery of the True Cross, with my friends</h2>
             <div class="gallery">
                 <figure>
                     <img src="images/Meskel1.jpg" alt="A group photo before the bonfire">
                     <figcaption>A group photo before the bonfire</figcaption>
                 </figure>
-                <figure>
+                <figure >
                     <img src="images/Meskel2.jpg" alt="Performing Religious Song">
                     <figcaption>Performing Religious <span lang="am">Meskel</span> Song</figcaption>
                 </figure>
@@ -70,7 +69,7 @@
         </section>
     
         <section class="container">
-            <h3>Celebrating Culture Day with my friends</h3>
+            <h2>Celebrating Culture Day with my friends</h2>
             <div class="gallery">
                 <figure>
                     <img src="images/culture1.jpg" alt="Friends celebrating Culture Day in traditional costumes">
@@ -89,11 +88,20 @@
     </main>
     <footer>
         <small>
-            &copy; 2023, Copyrights reserved.| Designed by Semegn Mulugeta.
+            &copy; 2024, Copyrights reserved.| Designed by Semegn Mulugeta.
         </small> 
-        <script src="js/footer.js"></script>
+        
 
     </footer>
-    <script src="js/gallery.js"></script>
+     <script>
+         function toggleNav() {
+     var navLinks = document.getElementById('nav-links');
+     var body = document.body; navLinks.classList.toggle('show'); 
+     if (navLinks.classList.contains('show')) { body.classList.add('moved-content'); } else { body.classList.remove('moved-content'); }
+     }
+     const hamburger = document.querySelector('.hamburger');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');});
+     </script>
 </body>
 </html>
