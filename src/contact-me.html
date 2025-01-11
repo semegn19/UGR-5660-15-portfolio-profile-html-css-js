@@ -5,52 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to Semegn Mulugeta's portfolio. Learn about my skills, interests, and aspirations as a Software Engineering student.">
     <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <title>Contact me </title>
 </head>
 <body>
     <header>
         <nav class="navbar">
-        <button class="hamburger" aria-label="Toggle navigation">                                      
+        <button class="hamburger" aria-label="Toggle navigation" onclick="toggleNav()">                                      
            <span></span> 
            <span></span>
            <span></span> 
         </button>
-        <ul>
-            <li><a href="index.html">Home</a></li>
+        <ul id="nav-links">
+            <li><a href="../index.html">Home</a></li>
             <li><a href="about-me.html">About me</a></li>
             <li><a href="moments.html">Favorite Moments</a></li>
             <li><a href="skills.html">Skills</a></li>
             <li><a href="contact-me.html">Contact me</a></li>
         </ul>             
         </nav>
-        <script src="js/nav.js"></script>
+        
     </header>
     <main>
+        <h1>Contact me</h1>
+        <div class="sections-container">
         <section>
-            <h1 class="title">
-            <img src="images/telephone.png" alt="Telephon Icon" class="icon">Reach out
-            </h1>
-            <p>Use my email account:<a href="mailto:semegnnyx@gmail.com" target="_blank" rel="noopener noreferrer"><img src="images/email.png" alt="Mail Icon">semegnnyx@gmail.com</a>
+            <h2>Reach out
+            </h2>
+            <p>Use my email account:<a href="mailto:semegnnyx@gmail.com" target="_blank" rel="noopener noreferrer">semegnnyx@gmail.com</a>
 
  </p>
         </section>
         <section>
             <h2>You can find me on</h2>
             <ul>
-                <li><a href="https://github.com/semegn19" target="_blank" rel="noopener noreferrer"><img src="images/github.png" alt="Github icon"> Github</a> </li>
-                <li><a href="https://t.me/khai_si" target="_blank" rel="noopener noreferrer"><img src="images/telegram.png" alt="Telegram icon"> Telegram</a> </li>
-                <li><a href="https://www.instagram.com/cassiopia__19?igsh=MTVrdjR1ZG5heHJvdQ==" target="_blank" rel="noopener noreferrer"><img src="images/instagram.png" alt="Instagram icon"> Instagram</a> </li>
+                <li><a href="https://github.com/semegn19" target="_blank" rel="noopener noreferrer"> Github</a> </li>
+                <li><a href="https://t.me/khai_si" target="_blank" rel="noopener noreferrer">Telegram</a> </li>
+                <li><a href="https://www.instagram.com/cassiopia__19?igsh=MTVrdjR1ZG5heHJvdQ==" target="_blank" rel="noopener noreferrer"> Instagram</a> </li>
         </ul>
     </section>
+    </div>
     </main>
     <footer>
         <small>
-            &copy; 2023, Copyrights reserved. | Designed by Semegn Mulugeta
+            &copy; 2024, Copyrights reserved. | Designed by Semegn Mulugeta
         </small> 
-        <script src="js/footer.js"></script>
+        
 
     </footer>
-    <script src="js/main.js"></script>
+   <script>
+       function toggleNav() {
+     var navLinks = document.getElementById('nav-links');
+     var body = document.body; navLinks.classList.toggle('show'); 
+     if (navLinks.classList.contains('show')) { body.classList.add('moved-content'); } else { body.classList.remove('moved-content'); }
+     }
+     const hamburger = document.querySelector('.hamburger');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');});
+   </script>
   </body>
 </html>
