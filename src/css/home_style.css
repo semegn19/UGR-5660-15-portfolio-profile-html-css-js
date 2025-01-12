@@ -92,7 +92,7 @@ footer {
 }
 
 
-@media (min-width: 1440px) {
+@media (min-width: 1064px) {
     header{
        height: 3vh;
     }
@@ -109,8 +109,8 @@ footer {
     header nav a {
         flex: 1;
         text-align: center;
-        margin: 70px;
-        
+        margin: 61px;
+        padding: 0px;
     }
 
     main h1 {
@@ -128,7 +128,7 @@ footer {
 }
 
 /* Tablet landscape version (1024x767 to 1439x1024) */
-@media screen and (min-width: 767px) and (max-width: 1439.9px) and (orientation: landscape) {
+@media screen and (min-width: 767px) and (max-width: 1063.9px) and (orientation: landscape) {
     header {
         width: 200px;
         position: fixed;
@@ -169,12 +169,14 @@ footer {
     }
 
     main {
-        margin-left: 13%;
+        margin-left: 20%;
         padding-top: 5%;
+        
     }
     main h1 {
         margin-top: 20vh;
         font-size: 36px;
+        
     }
     main p{
         padding-top: 15%;
@@ -188,7 +190,7 @@ footer {
 }
 
 /* Tablet portrait version (767x1024 to 1023x1440) */
-@media screen and (min-width: 767px) and (max-width: 1439.9px) and (orientation: portrait) {
+@media screen and (min-width: 767px) and (max-width: 1063.9px) and (orientation: portrait) {
    body {        
        text-align: left;
    }
@@ -238,17 +240,19 @@ footer {
         padding-top: 0px;
         text-align: left;
         
+        
     }
     main h1 {
         text-align: left;
         font-size: 36px;
         width:80%;
         margin-top: 20vh;
+        
     }
     main p{
         padding-top: 80px;
-        text-align: left;
-        margin-left: -150px;
+        margin-left: -60px;
+        padding-left: 0px;
         
     }
     footer{
