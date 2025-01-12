@@ -136,7 +136,7 @@ footer {
     margin-bottom: 10px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1064px) {
     header{
        height: 3vh;
     }
@@ -153,7 +153,8 @@ footer {
     header nav a {
         flex: 1;
         text-align: center;
-        margin: 70px;
+        margin: 61px;
+        padding: 0px;
     }
     main h1 {
         font-size: 48px;
@@ -174,7 +175,7 @@ footer {
     }
     
     .gallery figure, .gallery figure .one{
-        height: 15vh;
+        height: 17vh;
         margin-top: -20px;
     }
     .gallery video{
@@ -184,7 +185,8 @@ footer {
         width:150%;
     }
     .gallery figure .one{
-        width:65%;
+        width:60%;
+        height:15vh;
         margin-top:0px;
     }
     #cut{
@@ -204,7 +206,7 @@ footer {
     }
 }
 /* Tablet landscape version (1024x767 to 1439x1024) */
-@media screen and (min-width: 767px) and (max-width: 1439.9px) and (orientation: landscape) {
+@media screen and (min-width: 767px) and (max-width: 1063.9px) and (orientation: landscape) {
     header {
         width: 200px;
         position: fixed;
@@ -280,7 +282,7 @@ footer {
 }
 
 /* Tablet portrait version (767x1024 to 1023x1440) */
-@media screen and (min-width: 767px) and (max-width: 1439.9px) and (orientation: portrait) {
+@media screen and (min-width: 767px) and (max-width: 1063.9px) and (orientation: portrait) {
    body { 
        text-align: left;
    }
