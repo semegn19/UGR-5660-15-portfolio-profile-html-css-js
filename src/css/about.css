@@ -130,7 +130,7 @@ footer {
     display: block;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1064px) {
     header{
        height: 3vh;
     }
@@ -147,7 +147,8 @@ footer {
     header nav a {
         flex: 1;
         text-align: center;
-        margin: 70px;
+        margin: 61px;
+        padding: 0px;
         
     }
     main{
@@ -166,15 +167,13 @@ footer {
         margin-left: 1%;
         height:3vh;
     }
-    section#about-me, section#goals-aspirations {
-        width: 23%;
-        
-    }
     section#about-me{
+        width: 23%;
         padding-right:3%;
     }
-    section#about-me{
+    section#goals-aspirations{
         padding-right:2%;
+        width:25%
     }
     section#hobbies-interests{
         width: 35%;
@@ -185,7 +184,7 @@ footer {
 }
 
 /* Tablet landscape version (1024x767 to 1439x1024) */
-@media screen and (min-width: 767px) and (max-width: 1439.9px) and (orientation: landscape) {
+@media screen and (min-width: 767px) and (max-width: 1063.9px) and (orientation: landscape) {
     header {
         width: 200px;
         position: fixed;
@@ -258,7 +257,7 @@ footer {
 }
 
 /* Tablet portrait version (767x1024 to 1023x1440) */
-@media screen and (min-width: 767px) and (max-width: 1439.9px) and (orientation: portrait) {
+@media screen and (min-width: 767px) and (max-width: 1063.9px) and (orientation: portrait) {
    body {  
        text-align: left;
    }
